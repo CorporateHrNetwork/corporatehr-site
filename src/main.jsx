@@ -3,21 +3,15 @@ import { createRoot } from 'react-dom/client';
 import { motion } from 'framer-motion';
 import { FiArrowUpRight, FiMail, FiPhone, FiMapPin, FiMenu } from 'react-icons/fi';
 import './styles.css';
-import zermattLiquor from './assets/zermatt-liquor.webp';
-import beerBarn from './assets/beer-barn.webp';
-import twizellEducation from './assets/twizell-education.webp';
-import viewpoint from './assets/viewpoint.webp';
-import twizellImmigration from './assets/twizell-immigration.webp';
-import zermattWine from './assets/zermatt-wine.webp';
 
 const fade={hidden:{opacity:0,y:22},show:{opacity:1,y:0,transition:{duration:.55}}};
 const clients=[
- {name:'Zermatt Liquor Limited',logo:zermattLiquor,quote:'CorporateHr Network has helped us strengthen structure, accountability and consistency across our people operations.'},
- {name:'Beer Barn',logo:beerBarn,quote:'Their HR and training support is practical, relevant and closely connected to business performance.'},
- {name:'Zermatt Wine, Champagne & Spirits',logo:zermattWine,quote:'Their guidance has improved clarity, workforce coordination and accountability across our operations.'},
- {name:'Twizell Education Services',logo:twizellEducation,quote:'CorporateHr Network brings a structured, practical approach to people management.'},
- {name:'Twizell Immigration Consulting',logo:twizellImmigration,quote:'Their support has helped us strengthen internal processes and build sustainable people systems.'},
- {name:'Viewpoint Management Consultants Ltd',logo:viewpoint,quote:'They combine practical HR knowledge with a strong understanding of organisational performance.'},
+ {name:'Zermatt Liquor Limited',logo:'https://corporatehrnetwork.wordpress.com/wp-content/uploads/2026/09/zermatt-logo.webp',quote:'CorporateHr Network has helped us strengthen structure, accountability and consistency across our people operations.'},
+ {name:'Beer Barn',logo:'https://corporatehrnetwork.wordpress.com/wp-content/uploads/2026/09/beerbarn-logo.webp',quote:'Their HR and training support is practical, relevant and closely connected to business performance.'},
+ {name:'Zermatt Wine, Champagne & Spirits',logo:'https://corporatehrnetwork.wordpress.com/wp-content/uploads/2026/09/zermatt-wine-champagne-spirits.webp',quote:'Their guidance has improved clarity, workforce coordination and accountability across our operations.'},
+ {name:'Twizell Education Services',logo:'https://corporatehrnetwork.wordpress.com/wp-content/uploads/2026/09/twizell-logo.webp',quote:'CorporateHr Network brings a structured, practical approach to people management.'},
+ {name:'Twizell Immigration Consulting',logo:'https://corporatehrnetwork.wordpress.com/wp-content/uploads/2026/09/twizell-immigration-logo.webp',quote:'Their support has helped us strengthen internal processes and build sustainable people systems.'},
+ {name:'Viewpoint Management Consultants Ltd',logo:'https://corporatehrnetwork.wordpress.com/wp-content/uploads/2026/09/viewpoint-logo.webp',quote:'They combine practical HR knowledge with a strong understanding of organisational performance.'},
 ];
 const services=[
  ['HR Advisory & Outsourcing','Policies, people governance, HR operations and practical workforce administration.'],

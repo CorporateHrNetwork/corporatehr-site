@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { motion } from 'framer-motion';
 import { FiArrowUpRight, FiMail, FiPhone, FiMapPin, FiMenu } from 'react-icons/fi';
 import './styles.css';
+import './zermatt-motion.css';
 
 const fade={hidden:{opacity:0,y:22},show:{opacity:1,y:0,transition:{duration:.55}}};
 const clients=[
@@ -22,9 +23,7 @@ const services=[
  ['CHRiS HR Technology','Connected HR technology built for control, compliance, visibility and better decisions.']
 ];
 function Header(){const [open,setOpen]=React.useState(false);return <header className="site-header"><a className="brand" href="#home"><span className="brand-mark">C</span><span><b>CorporateHr Network</b><small>PEOPLE • PERFORMANCE • PARTNERSHIPS</small></span></a><button className="menu" onClick={()=>setOpen(!open)} aria-label="Toggle menu"><FiMenu/></button><nav className={open?'open':''}><a href="#solutions">Solutions</a><a href="#training">Training</a><a href="#clients">Clients</a><a href="#about">About</a><a href="#contact">Contact</a><a className="nav-cta" href="https://www.chris.crnetwork.com.ng/">CHRiS <FiArrowUpRight/></a></nav></header>}
-function App(){return <>
-<Header/>
-<main>
+function App(){return <><Header/><main>
 <section id="home" className="hero dark"><motion.div initial="hidden" animate="show" variants={fade} className="hero-copy"><span className="eyebrow">PEOPLE • PERFORMANCE • PARTNERSHIPS</span><h1>Build stronger people systems for better business performance.</h1><p>CorporateHr Network delivers practical HR advisory, outsourcing, recruitment, training and HR technology solutions that help organisations attract, develop, manage and retain great people.</p><div className="actions"><a className="btn gold" href="#contact">Talk to an HR Expert</a><a className="btn light" href="https://www.chris.crnetwork.com.ng/">Explore CHRiS</a></div></motion.div><motion.div initial={{opacity:0,scale:.97}} animate={{opacity:1,scale:1}} transition={{duration:.7}} className="hero-panel"><div className="metric"><b>People</b><span>Clearer systems</span></div><div className="metric"><b>Performance</b><span>Better accountability</span></div><div className="metric"><b>Partnerships</b><span>Practical delivery</span></div></motion.div></section>
 <section className="gold-band"><b>PEOPLE</b><span>We value people.</span><b>PERFORMANCE</b><span>We drive performance.</span><b>PARTNERSHIPS</b><span>We build lasting partnerships.</span></section>
 <section id="solutions" className="section"><span className="eyebrow green">OUR SOLUTIONS</span><h2>Integrated HR solutions for a stronger tomorrow.</h2><p className="lead">From strategy to execution, we provide end-to-end people solutions that help organisations build high-performing teams, stronger controls and sustainable growth.</p><div className="grid3">{services.map((s,i)=><motion.article variants={fade} initial="hidden" whileInView="show" viewport={{once:true}} className="card" key={s[0]}><span className="num">0{i+1}</span><h3>{s[0]}</h3><p>{s[1]}</p></motion.article>)}</div></section>

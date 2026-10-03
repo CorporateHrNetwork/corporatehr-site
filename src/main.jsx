@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { FiArrowUpRight, FiMail, FiPhone, FiMapPin, FiMenu } from 'react-icons/fi';
 import './styles.css';
 import './zermatt-motion.css';
+import './zermatt-motion.js';
 
 const fade={hidden:{opacity:0,y:22},show:{opacity:1,y:0,transition:{duration:.55}}};
 const clients=[
